@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>with_md5_checksum</string>
+	<key>operationDescriptors</key>
+	<array>
+		<dict>
+			<key>className</key>
+			<string>PTHPastebotFilterOperationDescriptorShell</string>
+			<key>scriptString</key>
+			<string>#!/usr/bin/env bash
+
+STDIN=$(cat)
+MD5=$(echo -n "$STDIN" | MD5)
+
+echo "$STDIN"
+echo -e "\\n$MD5"</string>
+		</dict>
+	</array>
+</dict>
+</plist>

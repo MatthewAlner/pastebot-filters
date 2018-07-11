@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>cowsay</string>
+	<key>operationDescriptors</key>
+	<array>
+		<dict>
+			<key>className</key>
+			<string>PTHPastebotFilterOperationDescriptorShell</string>
+			<key>scriptString</key>
+			<string>#!/usr/bin/env bash
+
+export PATH=/usr/local/bin:$PATH
+
+STDIN=$(cat)
+
+echo "$STDIN" | cowsay</string>
+		</dict>
+	</array>
+</dict>
+</plist>
